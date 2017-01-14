@@ -15,6 +15,6 @@ export class OrderListService {
   getOrders(): Observable<Order[]> {
     return this.http
       .get(ORDERS_URL)
-      .map((response: Response) => response.json());
+      .map((response: Response) => response.json().orders);
   }
 }

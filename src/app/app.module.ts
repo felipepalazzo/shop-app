@@ -5,18 +5,25 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { OrderListComponent } from './order-list/order-list.component';
+
+// service
+import { OrderListService } from './order-list/order-list.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopMenuComponent,
+    OrderListComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    OrderListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
