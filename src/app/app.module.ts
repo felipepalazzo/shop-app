@@ -9,17 +9,20 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { AddressListComponent } from './address-list/address-list.component';
+import { CartComponent } from './cart/cart.component';
 
 // service
 import { ProductListService } from './product-list/product-list.service';
 import { UserFormService } from './user-form/user-form.service';
 import { AddressListService } from './address-list/address-list.service';
+import { CartService } from './cart/cart.service';
 
 const routes: Routes = [
   { path: '', component: ProductListComponent, pathMatch: 'full' },
   { path: 'products', component: ProductListComponent },
   { path: 'address', component: AddressListComponent },
   { path: 'user', component: UserFormComponent },
+  { path: 'cart', component: CartComponent },
 ];
 
 @NgModule({
@@ -29,6 +32,7 @@ const routes: Routes = [
     ProductListComponent,
     UserFormComponent,
     AddressListComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +44,7 @@ const routes: Routes = [
     ProductListService,
     UserFormService,
     AddressListService,
+    CartService,
   ],
   bootstrap: [AppComponent]
 })
