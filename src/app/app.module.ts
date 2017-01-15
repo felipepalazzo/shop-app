@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { AddressListComponent } from './address-list/address-list.component';
 
 // service
 import { OrderListService } from './order-list/order-list.service';
@@ -16,6 +17,7 @@ import { UserFormService } from './user-form/user-form.service';
 const routes: Routes = [
   { path: '', component: AppComponent, pathMatch: 'full' },
   { path: 'orders', component: OrderListComponent },
+  { path: 'address', component: AddressListComponent },
   { path: 'user', component: UserFormComponent },
 ];
 
@@ -25,6 +27,7 @@ const routes: Routes = [
     TopMenuComponent,
     OrderListComponent,
     UserFormComponent,
+    AddressListComponent,
   ],
   imports: [
     BrowserModule,
