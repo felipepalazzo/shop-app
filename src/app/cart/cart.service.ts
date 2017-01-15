@@ -11,7 +11,4 @@ export class CartService {
   addToCart(product){
     this.products.push(product);
   }
-  remove(product){
-    this.products = this.products.filter((p) => p.sku !== product.sku)
-  }
 }

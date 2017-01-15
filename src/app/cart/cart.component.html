@@ -1,6 +1,16 @@
-<div class="list-group">
-  <span class="list-group-item" *ngFor="let product of products">
-    <h4 class="list-group-item-heading">{{ product.name }}</h4>
-    <p class="list-group-item-text">{{ product.description }}</p>
-  </span>
+<div class="text-center">
+  <h2>Minhas compras</h2>
+</div>
+<div class="panel panel-default clearfix" *ngFor="let product of products">
+  <div class="panel-body">
+    <h4>{{ product.name }}</h4>
+    <p>{{ product.description }}</p>
+    <button class="btn btn-default pull-right" type="button" (click)="removeFromCart(product)">
+      Remover <i class="glyphicon glyphicon-trash"></i>
+    </button>
+  </div>
+</div>
+
+<div class="alert alert-warning" *ngIf="!numOfProducts">
+  Seu carrinho está vazio. Não perca tempo, <a routerLink="/" class="alert-link">veja nossos produtos!</a>
 </div>
