@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserFormService } from './user-form.service';
 
 import { User } from '../models/user.interface';
 
@@ -6,12 +7,18 @@ import { User } from '../models/user.interface';
   selector: 'user',
   templateUrl: './user-form.component.html',
 })
-export class UserFormComponent {
-  user: User = {
-    name: 'John Doe',
-    email: 'john.doe@email.com',
+export class UserFormComponent implements OnInit {
+  user: User;
+  isEditing: boolean = false;
+  constructor(private userFormService: UserFormService){}
+  ngOnInit(){
+    this.user = this.userFormService.get()
+  }
+  toggleEdit(){
+    this.isEditing = !this.isEditing
   }
   onSubmit(form){
-    this.user = Object.assign({}, this.user, form.value);
+    this.userFormService.update(form.value)
+    this.toggleEdit()
   }
 }

@@ -11,6 +11,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 
 // service
 import { OrderListService } from './order-list/order-list.service';
+import { UserFormService } from './user-form/user-form.service';
 
 const routes: Routes = [
   { path: '', component: AppComponent, pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
   ],
   providers: [
-    OrderListService
+    OrderListService,
+    UserFormService
   ],
   bootstrap: [AppComponent]
 })

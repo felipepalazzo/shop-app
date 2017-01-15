@@ -1,18 +1,23 @@
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Editar conta</h3>
+    <h3 class="panel-title">Minha conta</h3>
   </div>
   <div class="panel-body">
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" class="form-control" name="name" [ngModel]="user.name" required>
+    <div *ngIf="!isEditing">
+      <p><strong>Nome:</strong> {{ user.name }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <button class="btn btn-primary" (click)="toggleEdit()">Editar</button>
+    </div>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate *ngIf="isEditing">
+      <div class="form-group" [ngClass]="{ 'has-error': name.errors?.required }">
+        <label>Nome</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" required #name="ngModel">
       </div>
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': email.errors?.required }">
         <label>Email</label>
-        <input type="email" class="form-control" name="email" [ngModel]="user.email" required>
+        <input type="email" class="form-control" name="email" [(ngModel)]="user.email" required #email="ngModel">
       </div>
-      <button class="btn btn-success">Salvar</button>
+      <button class="btn btn-success" type="submit" [disabled]="f.invalid">Salvar</button>
     </form>
   </div>
 </div>
