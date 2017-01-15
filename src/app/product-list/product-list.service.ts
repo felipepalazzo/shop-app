@@ -4,17 +4,17 @@ import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Order } from '../../app/models/order.interface';
+import { Product } from '../../app/models/product.interface';
 
-const ORDERS_URL: string = './orders.json';
+const ORDERS_URL: string = './products.json';
 
 @Injectable()
-export class OrderListService {
+export class ProductListService {
   constructor(private http: Http){}
 
-  getOrders(): Observable<Order[]> {
+  getOrders(): Observable<Product[]> {
     return this.http
       .get(ORDERS_URL)
-      .map((response: Response) => response.json().orders);
+      .map((response: Response) => response.json().products);
   }
 }

@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "name": "Insignia™ - 24 Class (23.6 Diag.) - LED - 720p - HDTV - Black",
+      "description": "Upgrade your home entertainment system with this 24-inch Insignia LED TV",
+      "image_path": "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/5333/5333701_sa.jpg"
+    }, {
+      "name": "Samsung - 55 Class (54.6 Diag.) - LED - 2160p - Smart - 4K Ultra HD TV - Black - Larger Front",
+      "description": "Enjoy movies, television and music with this Samsung LED smart television",
+      "image_path": "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/5624/5624256_sa.jpg"
+    },
+    {
+      "name": "Sony - 48 Class - (47.6 Diag.) - LED - 1080p - Smart - HDTV - Black - Larger Front",
+      "description": "Enjoy movies and more on the Sony R510C Full HD LED TV.",
+      "image_path": "http://pisces.bbystatic.com/image2/BestBuy_US/images/products/4684/4684429_sa.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<div *ngFor="let product of products" class="panel panel-default">
+  <div class="panel-body">
+    <div class="media">
+      <div class="media-left">
+        <img src="{{ product.image_path }}" class="media-object">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">{{ product.name }}</h4>
+        {{ product.description }}
+      </div>
+      <button class="btn btn-default pull-right">Comprar</button>
+    </div>
+  </div>
+</div>
