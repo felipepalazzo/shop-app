@@ -13,6 +13,7 @@ import { AddressListComponent } from './address-list/address-list.component';
 // service
 import { OrderListService } from './order-list/order-list.service';
 import { UserFormService } from './user-form/user-form.service';
+import { AddressListService } from './address-list/address-list.service';
 
 const routes: Routes = [
   { path: '', component: AppComponent, pathMatch: 'full' },
@@ -37,7 +38,8 @@ const routes: Routes = [
   ],
   providers: [
     OrderListService,
-    UserFormService
+    UserFormService,
+    AddressListService,
   ],
   bootstrap: [AppComponent]
 })

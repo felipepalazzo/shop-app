@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AddressListService } from './address-list.service'
 
 import { Address } from '../models/address.interface';
 
@@ -6,6 +7,15 @@ import { Address } from '../models/address.interface';
   selector: 'address-list',
   templateUrl: './address-list.component.html',
 })
-export class AddressListComponent {
-  address: Address;
+export class AddressListComponent implements OnInit {
+  addressList: Address[];
+  constructor(private addressListService: AddressListService){}
+  ngOnInit(){
+    this.addressList = this.addressListService.get()
+  }
+  handleSubmit(address: Address, isValid: boolean){
+    if ( isValid ) {
+      this.addressListService.add(address)
+    }
+  }
 }
