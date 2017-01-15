@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Editar conta</h3>
+  </div>
+  <div class="panel-body">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" [ngModel]="user.name" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" [ngModel]="user.email" required>
+      </div>
+      <button class="btn btn-success">Salvar</button>
+    </form>
+  </div>
+</div>

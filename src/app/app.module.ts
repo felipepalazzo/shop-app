@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { OrderListComponent } from './order-list/order-list.component';
+import { UserFormComponent } from './user-form/user-form.component';
 
 // service
 import { OrderListService } from './order-list/order-list.service';
@@ -14,6 +15,7 @@ import { OrderListService } from './order-list/order-list.service';
 const routes: Routes = [
   { path: '', component: AppComponent, pathMatch: 'full' },
   { path: 'orders', component: OrderListComponent },
+  { path: 'user', component: UserFormComponent },
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ const routes: Routes = [
     AppComponent,
     TopMenuComponent,
     OrderListComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
