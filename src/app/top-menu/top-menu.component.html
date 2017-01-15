@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" [ngClass]="{ 'open': isDropdownOpen }" (click)="toggleDropdown($event)">
-          <a href="#" class="dropdown-toggle">
+          <a href="#" class="dropdown-toggle" #dropdown>
             <i class="glyphicon glyphicon-user"></i>
             <i class="glyphicon glyphicon-chevron-down"></i>
           </a>

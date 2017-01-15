@@ -17,8 +17,4 @@ export class UserFormComponent implements OnInit {
   toggleEdit(){
     this.isEditing = !this.isEditing
   }
-  onSubmit(form){
-    this.userFormService.update(form.value)
-    this.toggleEdit()
-  }
 }
