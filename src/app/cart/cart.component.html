@@ -3,6 +3,7 @@
 </div>
 <div class="panel panel-default clearfix" *ngFor="let product of products">
   <div class="panel-body">
+    <p>Pedido n° {{ product.id }}</p>
     <h4>{{ product.name }}</h4>
     <p>{{ product.description }}</p>
     <button class="btn btn-default pull-right" type="button" (click)="removeFromCart(product)">

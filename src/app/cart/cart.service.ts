@@ -9,6 +9,7 @@ export class CartService {
     return this.products;
   }
   addToCart(product){
+    product['id'] = new Date().getUTCMilliseconds();
     this.products.push(product);
   }
 }

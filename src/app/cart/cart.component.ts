@@ -21,7 +21,7 @@ export class CartComponent implements OnInit {
     this.numOfProducts = this.products.length;
   }
   removeFromCart(product: Product) {
-    this.products = this.products.filter((p) => p.sku !== product.sku)
+    this.products = this.products.filter((p) => p.id !== product.id)
     this.numOfProducts = this.products.length;
   }
 }
