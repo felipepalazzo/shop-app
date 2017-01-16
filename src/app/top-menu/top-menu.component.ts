@@ -12,7 +12,7 @@ export class TopMenuComponent {
   constructor(private elementRef: ElementRef) { }
   isDropdownOpen: boolean = false;
   toggleDropdown(event) {
-    event.preventDefault();
+    event && event.preventDefault();
     this.isDropdownOpen = !this.isDropdownOpen;
   }
   onClick(event) {
